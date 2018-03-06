@@ -21,6 +21,10 @@ public class GlobalData implements IGlobals {
     public int program_counter = 0;
     public int[] register_file = new int[32];
     public boolean[] register_invalid = new boolean[32];
+    public boolean insInPipeline = false;
+    public int[] memory = new int[1024];
+    public boolean halt = false;
+    public int newPCAddr = 0;
 
     @Override
     public void reset() {
